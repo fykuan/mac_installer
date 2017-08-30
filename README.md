@@ -3,7 +3,7 @@ This bash script will install listed applications by
 
 * [homebrew](https://brew.sh/index_zh-tw.html) for CLI tools 
 * [Homebrew-Cask](https://caskroom.github.io/) for applications not on App Store
-* [mas](https://github.com/mas-cli/mas) for application on App Store
+* [mas](https://github.com/mas-cli/mas) for applications on App Store
 
 Useful when clean installing macOS
 
