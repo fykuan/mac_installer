@@ -9,6 +9,7 @@ if [ $# -eq 0 ]; then
 fi
 
 APPLE_ID=$1
+
 #
 # Install homebrew
 #
@@ -20,15 +21,18 @@ if ! which brew > /dev/null; then
 fi
 
 #
-#
+# Install applications by homebrew
 #
 echo "###################################"
 echo "Installing applications by homebrew"
 echo "###################################"
 brew install vim --with-lua
 brew install \
+    ansible \
+    flake8 \
     git \
     htop \
+    httpie \
     mas \
     mosh \
     nmap \
@@ -45,7 +49,7 @@ echo "################################"
 brew install brew-cask-completion
 
 #
-# Install applications
+# Install applications by Homebrew-Cask
 #
 echo "################################"
 echo "Installing applications by Cask"
@@ -74,12 +78,14 @@ brew cask install \
     tunnelblick \
     virtualbox \
     vlc
+
 #
-# Install from Mac App Store
+# Install applications from Mac App Store by mas
 #
 echo "#################################################"
 echo "Please input your Apple ID password in the dialog"
 echo "#################################################"
+# login to App Store
 mas signin --dialog ${APPLE_ID}
 
 echo "################################"
@@ -122,4 +128,5 @@ mas install 1247292524
 # Install PopClip
 mas install 445189367
 
+# Logout from App Store
 mas signout
